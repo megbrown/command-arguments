@@ -5,8 +5,12 @@ let myArg = process.argv[2];
 let [,, ...myArgs] = process.argv;
 
 function addArgs(myArgs) {
-	let sum = myArgs.reduce((a,b) => +a + +b, 0);
-	console.log(sum);
+	if(myArgs){
+		let sum = myArgs.reduce((a,b) => +a + +b, 0);
+		console.log(sum);
+	} else {
+		console.log(0);
+	}
 }
 
 addArgs(myArgs);
